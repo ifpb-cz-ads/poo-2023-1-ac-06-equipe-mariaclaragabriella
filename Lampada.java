@@ -1,4 +1,4 @@
-public class BMQuestao4 {
+public class Lampada {
     private float preco;
     private String tipo;
     private String marca;
@@ -46,10 +46,8 @@ public class BMQuestao4 {
     }
     
     void atualizarDisponibilidade(){
-        if(disponibilidade)
+        if(disponibilidade==true)
             disponibilidade = false;
-        else 
-            disponibilidade = true;
     }
 
     boolean comprarUnidades(int qtdd){
