@@ -1,36 +1,68 @@
 public class BMQuestao4 {
-    private float preco = 14.5f;
-    private String tipo = "LED";
-    private String marca = "Filix";
-    private boolean disponibilidade = true;
+    private float preco;
+    private String tipo;
+    private String marca;
+    private boolean disponibilidade;
+    private int quantidade;
 
-    boolean verificarDisponibilidade(){
+    boolean getDisponibilidade(){
         return disponibilidade;
     }
 
-    boolean atualizarDisponibilidade(){
-        return disponibilidade = false;
-    }
-
-    float perguntarPreco(){
+    float getPreco(){
         return preco;
     }
 
-    String perguntarMarca(){
+    String getMarca(){
         return marca;
     }
 
-    String perguntarTipo(){
+    String getTipo(){
         return tipo;
     }
-
-    boolean comprarUnidade(){
-        if(verificarDisponibilidade()){
-            return atualizarDisponibilidade();
-        }
-        else{
-            return false;
-        }
+    
+    int getQuantidade(){
+        return quantidade;
     }
+    
+    void setDisponibilidade(boolean disponibilidade){
+        this.disponibilidade = disponibilidade;
+    }
+
+    void setPreco(float preco){
+        this.preco = preco;
+    }
+
+    void setMarca(String marca){
+        this.marca = marca;
+    }
+
+    void setTipo(String tipo){
+        this.tipo = tipo;
+    }
+    
+    void setQuantidade(int quantidade){
+        this.quantidade = quantidade;
+    }
+    
+    void atualizarDisponibilidade(){
+        if(disponibilidade)
+            disponibilidade = false;
+        else 
+            disponibilidade = true;
+    }
+
+    boolean comprarUnidades(int qtdd){
+        if(disponibilidade==true&&qtdd<=quantidade){
+            quantidade -= qtdd;
+            if(quantidade==0){
+                atualizarDisponibilidade();
+            }
+            return true;
+        }
+        else
+            return false;
+    }
+    
 
 }
