@@ -14,6 +14,9 @@ void mostraDados(){
     //restante do código
 }
 ```
+### BMQuestao4:
+
+Questão implementada no arquivo Lampada.java: [Lampada.java](Lampada.java)
 
 ### BMQuestao6:
 
