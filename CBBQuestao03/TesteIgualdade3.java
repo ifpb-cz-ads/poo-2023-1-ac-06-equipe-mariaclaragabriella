@@ -1,4 +1,6 @@
-public class CBBQuestao03 {
+package CBBQuestao03;
+
+public class TesteIgualdade3 {
     public static void main(String[] args) {
         String frase1;
         String frase2;
